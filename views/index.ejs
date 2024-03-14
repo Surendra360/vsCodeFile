@@ -12,6 +12,12 @@
     <form action="/createfile" method="post">
       <input type="text" placeholder="Enter file name with extention" name="filename">
     </form>
+    <ul>
+      <li>
+       <% files.forEach(function(file, index){ %>
+          <li><a href=""><%= file%></a></li>
+       <% }) %>
+    </ul>
   </div>
   <div class="right-container"></div>
  </div>
