@@ -13,13 +13,19 @@
       <input type="text" placeholder="Enter file name with extention" name="filename">
     </form>
     <ul>
-      <li>
        <% files.forEach(function(file, index){ %>
-          <li><a href=""><%= file%></a></li>
+          <li>
+            <a href="/file/<%= file%>"> <%= file%></a>
+            <a href="/delete/<%= file%>">💔</a>
+          </li>
        <% }) %>
     </ul>
   </div>
-  <div class="right-container"></div>
+  <div class="right-container">
+    <form action="">
+      <textarea  cols="100" rows="20"><%= filedata%></textarea>
+    </form>
+  </div>
  </div>
 </body>
 </html>
